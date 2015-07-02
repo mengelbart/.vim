@@ -92,7 +92,7 @@ map <down> ddjP
 nnoremap <C-n> :call NumberToggle()<cr>
 
 " compile and run!
-au FileType tex map <F10> :!texi2pdf -c %<cr> 
+au FileType tex map <F10> :!make<cr> 
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " misceallaneous
