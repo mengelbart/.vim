@@ -13,6 +13,9 @@ execute pathogen#infect()
 " line numbers and textwrapping
 """""""""""""""""""""""""""""""""""""""""""""""
 
+" keep curser in the middle of the screen if possible
+set scrolloff=999
+
 " set relativenumber function mapped on ctrl-n (see section Key mappings)
 function! NumberToggle()
   if(&relativenumber == 1)
