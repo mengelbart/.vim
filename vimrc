@@ -68,6 +68,8 @@ let g:syntastic_mode_map = { "mode": "active",
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
+let g:syntastic_tex_chktex_args = "-n1"
+
 """""""""""""""""""""""""""""""""""""""""""""""
 " Snippets
 """""""""""""""""""""""""""""""""""""""""""""""
