@@ -107,3 +107,4 @@ map <F12> <ESC>ggg?G``" apply rot13 for people snooping over shoulder, good fun
 
 
 
+let g:Tex_PromptedEnvironments="itemize,align*,cases"
