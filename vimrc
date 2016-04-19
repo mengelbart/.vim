@@ -99,11 +99,12 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " compile and run!
 au FileType tex map <F10> :!make<cr> 
 
+map <F12> <ESC>ggg?G``" apply rot13 for people snooping over shoulder, good fun
+
 """""""""""""""""""""""""""""""""""""""""""""""
 " misceallaneous
 """""""""""""""""""""""""""""""""""""""""""""""
 set nobackup
-map <F12> <ESC>ggg?G``" apply rot13 for people snooping over shoulder, good fun
 
 
 
