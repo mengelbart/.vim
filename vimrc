@@ -101,6 +101,9 @@ au FileType tex map <F10> :!make<cr>
 
 map <F12> <ESC>ggg?G``" apply rot13 for people snooping over shoulder, good fun
 
+" insert date
+nmap <F2> i<C-R>=strftime("%Y-%m-%d %H:%M:%S %z")<CR><Esc>
+
 """""""""""""""""""""""""""""""""""""""""""""""
 " misceallaneous
 """""""""""""""""""""""""""""""""""""""""""""""
