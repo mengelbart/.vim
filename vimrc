@@ -6,6 +6,7 @@
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""
 
+let g:pathogen_disabled = ['ultisnips']
 execute pathogen#infect()
 
 
@@ -30,7 +31,7 @@ set number
 
 " wrap text and show 80 char mark
 set textwidth=80
-let &colorcolumn="80,".join(range(120,999),",")
+let &colorcolumn="80".join(range(81,999),",")
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -81,6 +82,8 @@ let g:UltiSnipsEditSplit="vertical"
 """""""""""""""""""""""""""""""""""""""""""""""
 " Look
 """""""""""""""""""""""""""""""""""""""""""""""
+
+colo molokai
 
 " vim-airline configuration:
 set laststatus=2
