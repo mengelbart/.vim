@@ -1,6 +1,6 @@
-setlocal tabstop=2
-setlocal noexpandtab
-setlocal shiftwidth=2
+setlocal tabstop=4
+setlocal expandtab
+setlocal shiftwidth=4
 setlocal autoindent
 setlocal smartindent
 setlocal cindent

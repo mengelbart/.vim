@@ -6,9 +6,10 @@
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""
 
-let g:pathogen_disabled = ['ultisnips']
+"let g:pathogen_disabled = ['ultisnips']
 execute pathogen#infect()
 
+set term=xterm-256color
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " line numbers and textwrapping
@@ -38,8 +39,9 @@ highlight ColorColumn ctermbg=235 guibg=#2c2d27
 " Syntax and Completion
 """""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-filetype on
-filetype plugin indent on
+filetype indent plugin on
+
+let g:go_fmt_command = "goimports"
 
 let g:tex_flavor='latex'
 
@@ -83,21 +85,41 @@ let g:UltiSnipsEditSplit="vertical"
 " Look
 """""""""""""""""""""""""""""""""""""""""""""""
 
-colo molokai
+" Color stuff
+set t_Co=256
+
+let g:rehash256 = 1
+let g:molokai_original = 1
+colorscheme molokai
 
 " vim-airline configuration:
 set laststatus=2
+
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " Key mappings
 """""""""""""""""""""""""""""""""""""""""""""""
 
+" leader key
+let mapleader=','
+
+" build and run go
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+
 " move lines
 map <up> ddkP
 map <down> ddjP
 
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
 " toggle between relative and absolute line numbers
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-k> :call NumberToggle()<cr>
 
 " compile and run!
 au FileType tex map <F10> :!make<cr> 
@@ -112,6 +134,10 @@ nmap <F2> i<C-R>=strftime("%Y-%m-%d %H:%M:%S %z")<CR><Esc>
 """""""""""""""""""""""""""""""""""""""""""""""
 set nobackup
 
+" Write file on :make
+set autowrite
 
+" Enable backspace between lines
+set backspace=2
 
 let g:Tex_PromptedEnvironments="itemize,align*,cases"
