@@ -8,7 +8,7 @@ install:
 .PHONY: update
 update:
 	git submodule update --init --recursive
-	git submodule foreach git pull --recursive-submodules origin master
+	git submodule foreach git pull --recurse-submodules origin master
 
 .PHONY: README.md
 README.md:
