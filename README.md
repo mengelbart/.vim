@@ -9,6 +9,9 @@ to update the plugins section of the documentation.
 
 ## Plugins
 
+Plugins are installed using
+[Pathogen](https://github.com/tpope/vim-pathogen.git)
+
 * [github.com/vim-scripts/a.vim.git](https://github.com/vim-scripts/a.vim.git)
 * [github.com/kien/ctrlp.vim.git](https://github.com/kien/ctrlp.vim.git)
 * [github.com/Raimondi/delimitMate](https://github.com/Raimondi/delimitMate)
