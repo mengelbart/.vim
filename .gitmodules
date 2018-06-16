@@ -40,6 +40,6 @@
 [submodule "bundle/python-syntax"]
 	path = bundle/python-syntax
 	url = https://github.com/vim-python/python-syntax.git
-[submodule "bundle/vim-colorschemes"]
-	path = bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "bundle/colorschemes"]
+	path = bundle/colorschemes
+	url = https://github.com/rafi/awesome-vim-colorschemes.git
