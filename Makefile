@@ -12,4 +12,5 @@ update:
 
 .PHONY: README.md
 README.md:
-	git submodule --quiet foreach 'echo [`git config --get remote.origin.url | sed "s#https://##g"`]\(`git config --get remote.origin.url`\)' >> $@
+	@awk '!/https:\/\//' README.md > temp && mv temp README.md
+	@git submodule --quiet foreach 'echo \* [`git config --get remote.origin.url | sed "s#https://##g"`]\(`git config --get remote.origin.url`\)\' >> $@
