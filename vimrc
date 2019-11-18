@@ -63,7 +63,7 @@ let g:go_term_mode = 0
 function! s:build_go_files()
   let l:file = expand('%')
   if l:file =~# '^\f\+_test\.go$'
-    call go#cmd#Test(0, 1)
+    call go#test#Test(0, 1)
   elseif l:file =~# '^\f\+\.go$'
     call go#cmd#Build(0)
   endif
@@ -73,7 +73,7 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
-au FileType go nmap <leader>t :GoTest -nocolor<Cr>
+au FileType go nmap <leader>t :GoTest<Cr>
 
 augroup go
   autocmd!
