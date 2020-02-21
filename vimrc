@@ -8,8 +8,6 @@
 
 execute pathogen#infect()
 
-"set term=xterm-256color
-
 """""""""""""""""""""""""""""""""""""""""""""""
 " line numbers and textwrapping
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -139,11 +137,16 @@ let g:UltiSnipsEditSplit="vertical"
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Color stuff
-set t_Co=256
+"set t_Co=256
 
-let g:rehash256 = 1
-let g:molokai_original = 1
-colorscheme molokai
+" This makes kitty work with vims background color erase
+" see: https://sw.kovidgoyal.net/kitty/faq.html#using-a-color-theme-with-a-background-color-does-not-work-well-in-vim
+let &t_ut=''
+
+
+"let g:rehash256 = 1
+"let g:molokai_original = 1
+colorscheme purify
 
 " vim-airline configuration:
 set laststatus=2
