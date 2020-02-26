@@ -49,10 +49,13 @@ let g:go_auto_sameids = 1
 
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"
-let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
-let g:go_list_type = "quickfix"
 
+let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_command = "gopls"
+
+let g:go_gopls_staticcheck = 1
+let g:go_list_type = "quickfix"
 let g:go_term_mode = 0
 
 " build and run
