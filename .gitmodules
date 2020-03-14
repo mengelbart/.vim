@@ -34,3 +34,12 @@
 [submodule "pack/mengelbart/start/ultisnips"]
 	path = pack/mengelbart/start/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "pack/mengelbart/start/neosnippet.vim"]
+	path = pack/mengelbart/start/neosnippet.vim
+	url = git@github.com:Shougo/neosnippet.vim.git
+[submodule "pack/mengelbart/start/neosnippet-snippets"]
+	path = pack/mengelbart/start/neosnippet-snippets
+	url = git@github.com:Shougo/neosnippet-snippets.git
+[submodule "pack/mengelbart/start/deoplete.nvim"]
+	path = pack/mengelbart/start/deoplete.nvim
+	url = git@github.com:Shougo/deoplete.nvim.git

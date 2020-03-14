@@ -44,12 +44,14 @@ let g:go_auto_sameids = 1
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"
 
-let g:go_metalinter_autosave = 1
-"let g:go_metalinter_command = "gopls"
+let g:go_metalinter_autosave = 0
+let g:go_metalinter_command = "gopls"
 
 let g:go_gopls_staticcheck = 1
 let g:go_list_type = "quickfix"
 let g:go_term_mode = 0
+
+let g:go_snippet_engine = "neosnippet"
 
 " build and run
 
@@ -92,10 +94,26 @@ filetype indent plugin on
 " Snippets
 """""""""""""""""""""""""""""""""""""""""""""""
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-j>     <Plug>(neosnippet_expand_or_jump)
+smap <C-j>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-j>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " Look
@@ -111,7 +129,7 @@ let &t_ut=''
 
 "let g:rehash256 = 1
 "let g:molokai_original = 1
-colorscheme molokai
+colorscheme 256-jungle
 
 " vim-airline configuration:
 set laststatus=2
