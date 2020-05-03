@@ -43,3 +43,6 @@
 [submodule "pack/mengelbart/start/deoplete.nvim"]
 	path = pack/mengelbart/start/deoplete.nvim
 	url = git@github.com:Shougo/deoplete.nvim.git
+[submodule "pack/mengelbart/start/vim-terraform"]
+	path = pack/mengelbart/start/vim-terraform
+	url = git@github.com:hashivim/vim-terraform.git

@@ -45,7 +45,8 @@ let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"
 
 let g:go_metalinter_autosave = 0
-let g:go_metalinter_command = "gopls"
+"let g:go_metalinter_command = "gopls"
+let g:go_metalinter_command = "golangci-lint"
 
 let g:go_gopls_staticcheck = 1
 let g:go_list_type = "quickfix"
@@ -85,6 +86,13 @@ augroup quickfix
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""
+" vim-terraform
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""
 " Syntax and Completion
 """""""""""""""""""""""""""""""""""""""""""""""
 syntax on
@@ -110,9 +118,9 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
+"if has('conceal')
+"  set conceallevel=2 concealcursor=niv
+"endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -176,3 +184,4 @@ set autowrite
 " Enable backspace between lines
 set backspace=2
 
+let g:ctrlp_custom_ignore = 'node_modules'
