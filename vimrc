@@ -176,6 +176,9 @@ map <F12> <ESC>ggg?G``" apply rot13 for people snooping over shoulder, good fun
 " insert date
 nmap <F2> i<C-R>=strftime("%Y-%m-%d %H:%M:%S %z")<CR><Esc>
 
+" Map ESC to exit insert mode when in terminal mode
+tnoremap <Esc> <C-\><C-n>
+
 """""""""""""""""""""""""""""""""""""""""""""""
 " misceallaneous
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -188,3 +191,8 @@ set autowrite
 set backspace=2
 
 let g:ctrlp_custom_ignore = 'node_modules'
+
+set autoread
+set hidden
+
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE " transparent bg
